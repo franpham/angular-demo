@@ -1,15 +1,11 @@
 "use strict";
+// to create a controller:
 
 var myApp = angular.module('myApp');
 
-myApp.config(function() {
-
-})
-.run(function() {
-
-});
-
-myApp.controller('myController', ['$scope', function($scope) {
+// $ = Angular's variable; no # = your variable;
+myApp.controller('myController', ['$scope', 'mainCharacter', function($scope, mainCharacter) {
   $scope.myFirstName = 'Francis';
   $scope.myModel = 'Player 1 Ready!';
+  $scope.mainCharacter = mainCharacter;
 }]);
