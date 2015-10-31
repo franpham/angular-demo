@@ -4,8 +4,12 @@
   <meta charset="UTF-8">
   <title>Hello Angular</title>
 </head>
-<body>
-  <h1>Hello Angular</h1>
+<body ng-app>
+  <h1>{{"Hello " + "Angular"}}</h1>
+  <label for="">Input: {{ myModel }}</label>
+  <div>
+    <input type="text" ng-Model="myModel">
+  </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-beta.1/angular.min.js"></script>
 </body>
 </html>
