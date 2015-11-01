@@ -5,7 +5,7 @@
 angular.module('myApp')
   .service('BookService', [function() {
     this.addBook = function(book) {
-    // since variables are binded 2-way, MUST CREATE A NEW OBJECT with the new values instead of keeping a reference to the variable;
+    // since variables are binded 2-way, MUST CREATE A NEW OBJECT with the new values instead of keeping a reference to the variable
       this.books.push(
         { title: book.title,
           author: book.author }
