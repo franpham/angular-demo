@@ -2,10 +2,10 @@
 // TO CREATE A SERVICE:
 
 angular.module('myApp')
-  .service('BookService', [function() {
+  .service('Books', [function() {
     var self = this;      // must set self since setEndpoint is called in an event handler;
+    // variables are bound 2-way, so MUST CREATE A NEW OBJECT with new values instead of keeping a reference to the variables;
     this.addBook = function(book) {
-    // since variables are binded 2-way, MUST CREATE A NEW OBJECT with new values instead of keeping a reference to the variable;
       self.books.push(
         { title: book.title,
           author: book.author }

@@ -1,0 +1,22 @@
+
+    <fieldset>
+      <label for="">Search:
+        <input type="text" placeholder="Search Title" ng-model="searchBookTitle"><!-- model to search book titles -->
+      </label>
+      <br>
+      <label for="">Title:
+        <input type="text" id="new_book_title" ng-model="new_book.title"><!-- model to set book title -->
+      </label>
+      <label for="">Author:
+        <input type="text" id="new_book_author" ng-model="new_book.author">
+      </label>
+      <button ng-click="booker.addBook(new_book); new_book = {};">Add Book</button><!-- click directive to addBook() -->
+    </fieldset>         <!-- to reset the input fields, must set new_book to a new object -->
+
+    <h4>Book #1: {{ booker.books[1].title + ':' + booker.books[1].author }}</h4>
+    <h2>Books:</h2>
+    <ul ng-repeat="book in booker.books | filter:searchBookTitle | orderBy: 'title'"><!-- | = piping book to a filter -->
+      <li class="book">
+        <h4>{{ book.title }}: {{ book.author }}</h4>
+      </li>
+    </ul>

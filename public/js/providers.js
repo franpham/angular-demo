@@ -1,4 +1,5 @@
 "use strict";
+// TO CREATE A PROVIDER:
 
 angular.module('myApp')
   .provider('Movies', function() {
