@@ -10,6 +10,7 @@ myApp.controller('myController', ['$scope', 'mainCharacter', 'VersionFactory', '
     $scope.myModel = 'Player 1 Ready!';
     $scope.mainCharacter = mainCharacter;
     $scope.characterVersion = VersionFactory.characterVersion();
-    $scope.booksList = BookService.getBooks();
+    $scope.bookList = BookService.getBooks();
+    $scope.book1 = BookService.getBook(1);
   }
 ]);

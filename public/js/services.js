@@ -14,10 +14,11 @@ var books = [
     author: 'Malcolm Gladwell' }
 ];
 
+// 3 ways to define a service():
 angular.module('myApp')
   .service('BookService', [function() {
     this.getBook = function(id) {
-      ;
+      return books[1];
     };
     this.getBooks = function() {
       return books;
