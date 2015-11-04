@@ -1,14 +1,15 @@
 "use strict";
 // TO CREATE A SERVICE:
+// Services are instances of an anonymous function; Factories are object literals;
 
 angular.module('myApp')
-  .service('Books', [function() {
-    var self = this;      // must set self since setEndpoint is called in an event handler;
-    // variables are bound 2-way, so MUST CREATE A NEW OBJECT with new values instead of keeping a reference to the variables;
+  .service('Books', [function() {   // an anonymous function to create Service instances;
+    var self = this;      // set self if its methods are called in an event handler;
+    // variables are bound 2-way, so MUST CREATE A NEW OBJECT LITERAL instead of keeping a reference to the variables;
     this.addBook = function(book) {
       self.books.push(
         { title: book.title,
-          author: book.author }
+          author: book.author }   // new object literal;
       );
     };
     this.books = [
